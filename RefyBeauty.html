@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Refy Beauty</title>
+    <script
+      src="https://kit.fontawesome.com/452d94b75d.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,7 +29,7 @@
         border-radius: 10px;
       }
 
-      ul {
+      .nav ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -49,17 +53,38 @@
       }
 
       footer {
-        padding-top: 15px;
+        padding: 70px 0;
+
         margin-top: 50px;
-        font-size: 12px;
-        background-color: black;
-        color: white;
+        font-size: 15px;
+        background-color: #fee6e3;
+        color: rgb(0, 0, 0);
       }
 
       footer a {
-        color: white;
+        color: rgb(224, 186, 202);
       }
 
+      .footer-col {
+        text-align: center;
+        width: 33%;
+      }
+      .footer-col ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .footer-col h4 {
+        font-size: 15px;
+      }
+
+      .fab {
+        font-size: 20px;
+      }
+      .main {
+        background-color: #fee6e3;
+        padding: 10px 10px;
+      }
       .pol {
         display: block;
         margin-left: auto;
@@ -132,20 +157,7 @@
         font-weight: bold;
         margin-top: -30px;
       }
-      @media screen and (max-width: 600px) {
-        .nav a,
-        .nav input[type="text"] {
-          float: none;
-          display: block;
-          text-align: left;
-          width: 100%;
-          margin: 0;
-          padding: 14px;
-        }
-        .nav input[type="text"] {
-          border: 1px solid #ccc;
-        }
-      }
+
       .logo {
         display: block;
         margin-left: auto;
@@ -244,6 +256,9 @@
         .button-56 {
           padding: 2px 49px;
           margin: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
 
@@ -254,6 +269,23 @@
 
         .beauty {
           width: 80%;
+        }
+
+        .nav a,
+        .nav input[type="text"] {
+          float: none;
+          display: block;
+          text-align: left;
+          width: 100%;
+          margin: 0;
+          padding: 14px;
+        }
+        .nav input[type="text"] {
+          border: 1px solid #ccc;
+        }
+        .footer-col {
+          width: 50%;
+          margin-bottom: 30px;
         }
       }
     </style>
@@ -275,9 +307,9 @@
       />
     </div>
     <hr class="line" />
-    <h1><i>Redefining </i>Beauty</h1>
+    <div class="main">
+      <h1><i>Redefining </i>Beauty</h1>
 
-    <div>
       <img
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/055/original/200.gif?1676165204"
         class="pol"
@@ -322,16 +354,59 @@
         REFY encourages everyone to be confident enough to celebrate themselves
         and embrace their natural beauty.
       </p>
-
-      <form action="/action_page.php">
-        <p>Sign up and be a part of our community</p>
-        <input type="text" id="fname" name="fname" value="First Name" /><br />
-
-        <input type="text" id="lname" name="lname" value="Email" /><br /><br />
-        <button class="button-56" role="button">Submit</button>
-      </form>
     </div>
-    <footer>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Info</h4>
+            <ul>
+              <li>FAQ</li>
+              <li>Shipping</li>
+              <li>Returns</li>
+              <li>Order status</li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <ul>
+                <li>
+                  <i class="fab fa-facebook-f"></i>
+                </li>
+                <li>
+                  <i class="fab fa-twitter"></i>
+                </li>
+                <li>
+                  <i class="fab fa-instagram"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Sign up and be a part of our community</h4>
+            <form action="/action_page.php">
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                value="First Name"
+              /><br />
+
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                value="Email"
+              /><br /><br />
+              <button class="button-56" role="button">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
       <p>
         Developed by <b>Tiara Dillard </b>for <b>SheCodes </b>Beauty Brand
         Landing Page Challenge
