@@ -30,9 +30,12 @@
         left: 410px;
         position: absolute;
         font-size: 60px;
+        color: rgb(0, 0, 0);
       }
+
       h1,
-      h2 {
+      h2,
+      h3 {
         text-align: center;
       }
 
@@ -58,8 +61,10 @@
       }
 
       .main {
-        background-color: #ffeeee;
-        padding: 10px 10px;
+        background-color: #fff5f5;
+        padding: 74px 10px;
+        margin-bottom: 10px;
+        margin-top: -8px;
       }
       .main-img {
         display: block;
@@ -76,23 +81,30 @@
         margin-right: 20px;
         font-weight: bolder;
       }
-      .category-img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 300px;
-      }
-      .category-img:hover {
-        opacity: 20%;
-      }
+
       .row {
         display: flex;
       }
-
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
       .column {
         float: left;
-        width: 33.33%;
-        padding: 5px;
+        flex: 50%;
+        max-width: 50%;
+        padding: 0 104px;
+      }
+
+      .product {
+        width: 100%;
+        border-radius: 0px;
+        height: 100%;
+      }
+      .product-info {
+        padding-top: 100px;
+        text-align: center;
       }
       /* photogrid */
       .photogrid .row {
@@ -220,23 +232,16 @@
 
       @media (prefers-reduced-motion: no-preference) {
         .moving-text {
-          animation: marquee 20s linear infinite;
+          animation: marquee 30s linear infinite;
         }
       }
 
       /* buttons */
-      .main .button {
-        margin: 0;
-        position: absolute;
-        bottom: 30%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
+
       .button {
-        background-color: #ffffff;
+        background-color: #000000;
         border: 2px solid black;
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         border-radius: 6px;
         padding: 10px 32px;
         text-align: center;
@@ -247,6 +252,9 @@
         cursor: pointer;
       }
 
+      .button-shop {
+        padding: 10px 52px;
+      }
       .button:hover {
         outline: 0;
       }
@@ -255,7 +263,6 @@
 
       @media (min-width: 768px) {
         .button {
-          padding: 2px 49px;
           margin: auto;
           display: flex;
           justify-content: center;
@@ -326,36 +333,35 @@
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/055/original/200.gif?1676165204"
         class="main-img"
       />
-      <button class="button" role="button" onclick="//us.refybeauty.com/">
-        Shop Now
-      </button>
     </div>
 
-    <hr />
-    <h2><i>Shop by Category</i></h2>
-    <p>*Vegan & Cruelty Free*</p>
     <div class="row">
       <div class="column">
         <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/926/original/Screen_Shot_2023-02-10_at_6.48.48_PM.png?1676073172"
-          class="category-img"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/738/original/Screen_Shot_2023-02-22_at_3.42.33_PM.png?1677100730>"
+          class="product"
         />
-        <p class="category">Brows</p>
       </div>
       <div class="column">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/923/original/Screen_Shot_2023-02-10_at_6.51.57_PM.png?1676073157"
-          class="category-img"
-        />
-        <p class="category">Face& Body</p>
-      </div>
+        <h3><em>REFY LIP COLLECTION</em></h3>
+        The REFY Lip Collection contains the Lip Sculpt and Lip Gloss.
 
-      <div class="column">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/928/original/original.jpg?1676073185"
-          class="category-img"
-        />
-        <p class="category">Lips</p>
+        <p class="product-info">
+          Choose one of the six neutral shades of Lip Sculpt and define the lip
+          with the creamy, blendable lip liner. Set the lip liner with our
+          world-first setter, designed to keep colour in place for for up to 10
+          hours*. The setter provides a hydrating matte and smudge-proof finish.
+        </p>
+        <p class="product-info">
+          Vegan, Leaping Bunny Certified Cruelty Free and Clinically Tested.
+        </p>
+        <button
+          class="button button-shop"
+          role="button"
+          onclick="//us.refybeauty.com/"
+        >
+          Shop Now
+        </button>
       </div>
     </div>
     <hr />
@@ -370,26 +376,26 @@
     </p>
     <!--photo grid-->
     <div class="row photogrid">
-      <div class="column">
+      <div class="product-col column">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/727/original/Screen_Shot_2023-02-22_at_3.40.53_PM.png?1677098760"
           style="width: 100%"
         />
       </div>
-      <div class="column">
+      <div class="product-col column">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/728/original/Screen_Shot_2023-02-22_at_3.41.04_PM.png?1677098768"
           style="width: 100%"
         />
       </div>
-      <div class="column">
+      <div class="product-col column">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/729/original/Screen_Shot_2023-02-22_at_3.47.15_PM.png?1677098860"
           style="width: 100%"
         />
       </div>
 
-      <div class="column">
+      <div class="product-col column">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/730/original/Screen_Shot_2023-02-22_at_3.46.41_PM.png?1677098869"
           style="width: 100%"
