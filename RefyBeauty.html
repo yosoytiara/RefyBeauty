@@ -26,32 +26,101 @@
       }
       h1 {
         font-weight: 200;
+        bottom: 290px;
+        left: 410px;
+        position: absolute;
+        font-size: 60px;
       }
       h1,
       h2 {
         text-align: center;
       }
-      img {
-        border-radius: 10px;
-      }
-
-      .nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-      li {
-        float: center;
-        display: inline;
-      }
 
       p {
         text-align: center;
       }
-      form {
-        text-align: center;
+
+      img {
+        border-radius: 10px;
       }
 
+      .line {
+        font-weight: bold;
+        margin-top: -30px;
+      }
+
+      .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        width: 10%;
+      }
+
+      .main {
+        background-color: #ffeeee;
+        padding: 10px 10px;
+      }
+      .main-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 10px;
+        height: 400px;
+      }
+
+      .about {
+        font-size: 40px;
+        padding-left: 60px;
+        padding-right: 60px;
+        margin-right: 20px;
+        font-weight: bolder;
+      }
+      .category-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+      }
+      .category-img:hover {
+        opacity: 20%;
+      }
+      .row {
+        display: flex;
+      }
+
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+      }
+      /* photogrid */
+      .photogrid .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+      .photogrid .column {
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+      }
+
+      .photogrid .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+
+        float: left;
+        width: 100px;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .photogrid .column img:hover {
+        opacity: 20%;
+      }
+
+      /*footer */
       footer {
         padding: 70px 0;
 
@@ -64,7 +133,6 @@
       footer a {
         color: rgb(224, 186, 202);
       }
-
       .footer-col {
         text-align: center;
         width: 33%;
@@ -72,58 +140,30 @@
       .footer-col ul {
         margin: 0;
         padding: 0;
+        list-style-type: none;
+      }
+      .footer-col .fab {
+        font-size: 25px;
+      }
+      .footer-col .fab:hover {
+        color: #ffffff;
       }
 
       .footer-col h4 {
         font-size: 15px;
       }
-
-      .fab {
-        font-size: 20px;
+      form {
+        text-align: center;
       }
-      .main {
-        background-color: #fee6e3;
-        padding: 10px 10px;
-      }
-      .pol {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding-bottom: 10px;
-        height: 400px;
+      input[type="text"] {
+        padding: 10px;
+        margin: 10px 0;
+        border: 0;
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+        border-radius: 10px;
       }
 
-      .bio {
-        font-size: 40px;
-        padding-left: 60px;
-        padding-right: 60px;
-        margin-right: 20px;
-        font-weight: bolder;
-      }
-      .beauty {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 300px;
-      }
-      .beauty:hover {
-        opacity: 20%;
-      }
-      .row {
-        display: flex;
-      }
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-
-      .column {
-        float: left;
-        width: 33.33%;
-        padding: 5px;
-      }
-
+      /*nav bar */
       .nav {
         font-size: 20px;
         overflow: hidden;
@@ -153,26 +193,14 @@
         margin-right: 16px;
         font-size: 17px;
       }
-      .line {
-        font-weight: bold;
-        margin-top: -30px;
+      .nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
       }
 
-      .logo {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+      /* marquee */
 
-        width: 10%;
-      }
-
-      .category {
-        text-align: center;
-      }
-      .category:hover {
-        color: rgb(71, 71, 71);
-        font-weight: bold;
-      }
       .moving-text {
         color: #e0a39e;
         font-weight: bold;
@@ -192,25 +220,39 @@
 
       @media (prefers-reduced-motion: no-preference) {
         .moving-text {
-          animation: marquee 30s linear infinite;
+          animation: marquee 20s linear infinite;
         }
       }
 
-      input[type="text"] {
-        padding: 10px;
-        margin: 10px 0;
-        border: 0;
-        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-        border-radius: 10px;
+      /* buttons */
+      .main .button {
+        margin: 0;
+        position: absolute;
+        bottom: 30%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
       }
-
       .button {
-        align-items: center;
+        background-color: #ffffff;
+        border: 2px solid black;
+        color: rgb(0, 0, 0);
+        border-radius: 6px;
+        padding: 10px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+
+        cursor: pointer;
       }
 
       .button:hover {
         outline: 0;
       }
+
+      /* Large screens */
+
       @media (min-width: 768px) {
         .button {
           padding: 2px 49px;
@@ -220,13 +262,20 @@
           align-items: center;
         }
       }
+      /* Smaller screens */
 
       @media only screen and (max-width: 600px) {
+        h1 {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
         .moving-text {
           display: none;
         }
 
-        .beauty {
+        .category-img {
           width: 80%;
         }
 
@@ -245,6 +294,10 @@
         .footer-col {
           width: 50%;
           margin-bottom: 30px;
+        }
+        .photogrid .column {
+          flex: 100%;
+          max-width: 100%;
         }
       }
     </style>
@@ -271,15 +324,13 @@
 
       <img
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/055/original/200.gif?1676165204"
-        class="pol"
+        class="main-img"
       />
       <button class="button" role="button" onclick="//us.refybeauty.com/">
         Shop Now
       </button>
     </div>
-    <p class="moving-text">
-      Follow us @refybeauty | @refybeauty | @refybeauty | @refybeauty
-    </p>
+
     <hr />
     <h2><i>Shop by Category</i></h2>
     <p>*Vegan & Cruelty Free*</p>
@@ -287,14 +338,14 @@
       <div class="column">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/926/original/Screen_Shot_2023-02-10_at_6.48.48_PM.png?1676073172"
-          class="beauty"
+          class="category-img"
         />
         <p class="category">Brows</p>
       </div>
       <div class="column">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/923/original/Screen_Shot_2023-02-10_at_6.51.57_PM.png?1676073157"
-          class="beauty"
+          class="category-img"
         />
         <p class="category">Face& Body</p>
       </div>
@@ -302,19 +353,49 @@
       <div class="column">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/066/928/original/original.jpg?1676073185"
-          class="beauty"
+          class="category-img"
         />
         <p class="category">Lips</p>
       </div>
     </div>
     <hr />
     <div class="intro">
-      <p class="bio">
+      <p class="about">
         REFY encourages everyone to be confident enough to celebrate themselves
         and embrace their natural beauty.
       </p>
     </div>
+    <p class="moving-text">
+      Follow us @refybeauty | @refybeauty | @refybeauty | @refybeauty
+    </p>
+    <!--photo grid-->
+    <div class="row photogrid">
+      <div class="column">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/727/original/Screen_Shot_2023-02-22_at_3.40.53_PM.png?1677098760"
+          style="width: 100%"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/728/original/Screen_Shot_2023-02-22_at_3.41.04_PM.png?1677098768"
+          style="width: 100%"
+        />
+      </div>
+      <div class="column">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/729/original/Screen_Shot_2023-02-22_at_3.47.15_PM.png?1677098860"
+          style="width: 100%"
+        />
+      </div>
 
+      <div class="column">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/730/original/Screen_Shot_2023-02-22_at_3.46.41_PM.png?1677098869"
+          style="width: 100%"
+        />
+      </div>
+    </div>
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -329,7 +410,7 @@
           </div>
 
           <div class="footer-col">
-            <h4>follow us</h4>
+            <h4>Follow Us</h4>
             <div class="social-links">
               <ul>
                 <li>
@@ -367,10 +448,10 @@
         </div>
       </div>
       <p>
-        Developed by <b>Tiara Dillard </b>for <b>SheCodes </b>Beauty Brand
-        Landing Page Challenge
+        Developed by
+        <b><a href="https://github.com/@yosoytiara/">Tiara Dillard</a> </b>for
+        <b>SheCodes </b>Beauty Brand Landing Page Challenge
       </p>
-      <p><a href="https://github.com/@yosoytiara/">Open Sourced</a></p>
     </footer>
   </body>
 </html>
