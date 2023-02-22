@@ -24,7 +24,13 @@
         background-color: rgb(255, 255, 255);
         font-family: "Lato", sans-serif;
       }
-
+      h1 {
+        font-weight: 200;
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
       img {
         border-radius: 10px;
       }
@@ -38,13 +44,7 @@
         float: center;
         display: inline;
       }
-      h1 {
-        font-weight: 200;
-      }
-      h1,
-      h2 {
-        text-align: center;
-      }
+
       p {
         text-align: center;
       }
@@ -204,56 +204,15 @@
         border-radius: 10px;
       }
 
-      /* Button CSS */
-      .button-56 {
+      .button {
         align-items: center;
-        background-color: #fee6e3;
-        border: 2px solid #111;
-        border-radius: 8px;
-        box-sizing: border-box;
-        color: #111;
-        cursor: pointer;
-        display: flex;
+      }
 
-        font-size: 16px;
-        height: 36px;
-        justify-content: center;
-        line-height: 24px;
-        max-width: 100%;
-        padding: 0 25px;
-        position: relative;
-        text-align: center;
-        text-decoration: none;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-      }
-      .button-56:after {
-        background-color: #111;
-        border-radius: 8px;
-        content: "";
-        display: block;
-        height: 36px;
-        left: 0;
-        width: 100%;
-        position: absolute;
-        top: -2px;
-        transform: translate(8px, 8px);
-        transition: transform 0.2s ease-out;
-        z-index: -1;
-      }
-      .button-56:hover:after {
-        transform: translate(0, 0);
-      }
-      .button-56:active {
-        background-color: #ffeae8;
-        outline: 0;
-      }
-      .button-56:hover {
+      .button:hover {
         outline: 0;
       }
       @media (min-width: 768px) {
-        .button-56 {
+        .button {
           padding: 2px 49px;
           margin: auto;
           display: flex;
@@ -314,7 +273,7 @@
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/055/original/200.gif?1676165204"
         class="pol"
       />
-      <button class="button-56" role="button" onclick="//us.refybeauty.com/">
+      <button class="button" role="button" onclick="//us.refybeauty.com/">
         Shop Now
       </button>
     </div>
@@ -402,7 +361,7 @@
                 name="lname"
                 value="Email"
               /><br /><br />
-              <button class="button-56" role="button">Submit</button>
+              <button class="button" role="button">Submit</button>
             </form>
           </div>
         </div>
